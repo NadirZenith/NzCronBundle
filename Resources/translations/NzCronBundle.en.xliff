@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="" >
+        <body>
+            <trans-unit id="sidemenu.link_cron_scan">
+                <source>sidemenu.link_cron_scan</source>
+                <target>Scan</target>
+            </trans-unit>
+            <trans-unit id="sidemenu.link_cron_install">
+                <source>sidemenu.link_cron_install</source>
+                <target>Install</target>
+            </trans-unit>
+            <trans-unit id="sidemenu.link_cron_remove">
+                <source>sidemenu.link_cron_remove</source>
+                <target>Uninstall</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
