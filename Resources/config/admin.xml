@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+      <parameters>
+        <parameter key="nz.cron.admin.job.class">Nz\CronBundle\Admin\JobAdmin</parameter>
+        <parameter key="nz.cron.admin.job.translation_domain">NzCronBundle</parameter>
+        <parameter key="nz.cron.admin.job.controller">NzCronBundle:JobCRUD</parameter>
+        <parameter key="nz.cron.admin.job.entity">Nz\CronBundle\Entity\Job</parameter>
+    </parameters>
+    
+    <services>
+        <service id="nz.cron.admin.job" class="%nz.cron.admin.job.class%">
+            <tag name="sonata.admin" manager_type="orm" group="nz_cron" label="jobs"  label_catalogue="%nz.cron.admin.job.translation_domain%" label_translator_strategy="sonata.admin.label.strategy.underscore" />
+            <argument />
+            <argument>%nz.cron.admin.job.entity%</argument>
+            <argument>%nz.cron.admin.job.controller%</argument>
+
+            <call method="setTranslationDomain">
+                <argument>%nz.cron.admin.job.translation_domain%</argument>
+            </call>
+        </service>
+    </services>
+
+</container>
